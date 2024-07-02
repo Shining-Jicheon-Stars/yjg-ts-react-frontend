@@ -8,10 +8,10 @@ import LoadingPage from "../../components/LoadingPage";
 
 function NotApproved() {
   const headList = [
-    { value: "이름", col: "col-span-1" },
-    { value: "전화번호", col: "col-span-1" },
-    { value: "메일주소", col: "col-span-2" },
-    { value: "승인처리", col: "col-span-1" },
+    { value: "名前", col: "col-span-1" },
+    { value: "電話番号", col: "col-span-1" },
+    { value: "メール", col: "col-span-2" },
+    { value: "承認処理", col: "col-span-1" },
   ];
   const dataList = [
     { value: "name", col: "col-span-1" },
@@ -19,14 +19,14 @@ function NotApproved() {
     { value: "email", col: "col-span-2" },
     [
       {
-        value: "승인",
+        value: "承認",
         color: "bg-blue-400/90",
         onClick: (data: GetUserData) => {
           approvalMutation(data.id);
         },
       },
       {
-        value: "거절",
+        value: "断り",
         color: "bg-red-400/90",
         onClick: (data: GetUserData) => {
           if (window.confirm("거절하시겠습니까?")) {
@@ -107,10 +107,10 @@ function NotApproved() {
     <div className="px-10 h-full">
       <div className="flex">
         <div className="flex-1 text-2xl font-bold tracking-tighter text-left">
-          관리자 승인 대기 리스트
+          承認待ちリスト
         </div>
         <div className="self-end text-right p-4 font-bold tracking-widest">
-          {unApprovedUser.length}명
+          {unApprovedUser.length}名
         </div>
       </div>
       <div className="bg-white p-4 h-5/6 rounded-2xl overflow-auto shadow-lg">

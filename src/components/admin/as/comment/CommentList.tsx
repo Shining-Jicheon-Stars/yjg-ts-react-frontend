@@ -50,7 +50,7 @@ function CommentList(props: { id?: string }) {
 
   return (
     <div className="flex flex-wrap -mx-3 mb-6 py-2 px-4">
-      <h2 className="px-4 text-gray-800 text-sm font-bold">댓글쓰기</h2>
+      <h2 className="px-4 text-gray-800 text-sm font-bold">コメントを書き</h2>
       <div className="relative w-full px-3 mb-2 mt-1">
         <div
           className="bg-gray-100 absolute right-5 bottom-3 border border-black rounded-full border-opacity-40 p-1 cursor-pointer hover:bg-slate-200"
@@ -88,7 +88,7 @@ function CommentList(props: { id?: string }) {
           </div>
         </div> */}
       <h2 className="px-4 mb-2 text-gray-800 text-xl font-bold">
-        댓글({commentData.length})
+        コメント({commentData.length})
       </h2>
       <div className="bg-white border border-black/30 flex flex-col gap-3 rounded-lg h-[20rem] w-full overflow-auto px-5 py-3">
         {commentData.map((comment) => {

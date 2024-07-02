@@ -8,11 +8,11 @@ function TodayPlan(props: TodayMenuType) {
   const switchTime = () => {
     switch (meal_time) {
       case "b":
-        return "조식";
+        return "朝食";
       case "l":
-        return "중식";
+        return "中食";
       case "d":
-        return "석식";
+        return "夕食";
     }
   };
 

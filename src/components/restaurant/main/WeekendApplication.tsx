@@ -12,11 +12,11 @@ function WeekendApplication() {
   const kind = [
     {
       state: "sat",
-      head: "토요일",
+      head: "土曜日",
     },
     {
       state: "sun",
-      head: "일요일",
+      head: "日曜日",
     },
   ];
   // 가로스크롤 훅
@@ -45,7 +45,9 @@ function WeekendApplication() {
 
   return (
     <div>
-      <div className="font-bold text-lg pl-4 pb-2">• 주말 식수 신청 현황</div>
+      <div className="font-bold text-lg pl-4 pb-2">
+        • 週末の飲み水の申請状況
+      </div>
       <div
         ref={scrollRef}
         className="bg-white flex flex-col gap-5 w-[33rem] h-72 shadow-lg px-10 py-5 border border-black/10 rounded-xl whitespace-nowrap overflow-x-auto"

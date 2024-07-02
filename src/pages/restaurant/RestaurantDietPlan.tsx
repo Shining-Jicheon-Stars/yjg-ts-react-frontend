@@ -9,7 +9,6 @@ import { useQuery } from "@tanstack/react-query";
 import { ExcelPlanType } from "../../types/restaurant";
 import CloseIcon from "../../icons/CloseIcon";
 import TodayPlan from "../../components/restaurant/main/TodayPlan";
-import LoadingPage from "../../components/LoadingPage";
 
 function RestaurantDietPlan() {
   // 모달창 상태
@@ -108,7 +107,7 @@ function RestaurantDietPlan() {
       ) : null}
       {onModal ? <ModalAddPlan setOnModal={setOnModal} /> : null}
       <div className="flex gap-10 mt-4 ml-4 items-center">
-        <div className="font-bold text-3xl">식단표 관리</div>
+        <div className="font-bold text-3xl">献立表の管理</div>
         <select
           className="outline-none focus:outline-none px-4 py-1 bg-transparent font-bold text-xl border-b-2 border-black"
           value={selectedYear}
@@ -149,7 +148,7 @@ function RestaurantDietPlan() {
         </div>
         <div className="flex-1 text-right">
           <ListBtn
-            value="식단표 추가"
+            value="献立表追加"
             color="bg-blue-400/90"
             onClick={() => {
               setOnModal(true);

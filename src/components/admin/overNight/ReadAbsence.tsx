@@ -50,17 +50,17 @@ function ReadAbsence() {
     <div className="flex flex-col gap-4">
       <div className="flex border-b-2 border-black items-end">
         <div className="flex-1 text-4xl font-bold tracking-tighter text-left p-4">
-          {absence?.type === "sleep" ? "외박" : "외출"}{" "}
+          {absence?.type === "sleep" ? "外泊" : "外出"}{" "}
           <span className="text-3xl">
             🗓 {absence?.start_date} ~ {absence?.end_date}
           </span>
         </div>
 
         <div className="flex flex-col p-2 font-bold text-right text-lg">
-          <div>작성자 : {absence?.user.name}</div>
+          <div>作成者 : {absence?.user.name}</div>
           <div>
-            학번 :{" "}
-            {absence?.user.student_id ? absence?.user.student_id : "미등록"}
+            学番 :{" "}
+            {absence?.user.student_id ? absence?.user.student_id : "未登録"}
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@ function ReadAbsence() {
 
       <div className="flex justify-end gap-4">
         <ListBtn
-          value="외출 거절"
+          value="外出お断り"
           color="bg-orange-400/70"
           onClick={() => {
             if (id) {
@@ -85,7 +85,7 @@ function ReadAbsence() {
           }}
         />
         <ListBtn
-          value="닫기"
+          value="close"
           color="bg-red-400/90"
           onClick={() => {
             navigate("/main/admin/stayOut");

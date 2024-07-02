@@ -27,11 +27,11 @@ function ApplicationSettings() {
   const kind = [
     {
       state: "automatic",
-      head: "자동",
+      head: "自動",
     },
     {
       state: "manual",
-      head: "수동",
+      head: "手動",
     },
   ];
 
@@ -120,11 +120,11 @@ function ApplicationSettings() {
 
   return (
     <div>
-      <div className="font-bold text-lg pl-4 pb-2">• 식수 신청 설정</div>
+      <div className="font-bold text-lg pl-4 pb-2">• 飲み水の申請設定</div>
       <div className="bg-white flex w-[800px] flex-col gap-4 shadow-lg px-10 py-5 border border-black/10 rounded-xl">
         <div className="flex flex-col border-b border-black/20">
           <div className="flex gap-8">
-            <div className="font-bold text-2xl">주말 식수 신청</div>
+            <div className="font-bold text-2xl">週末の飲み水の申し込み</div>
             <div className="flex items-end gap-3">
               {kind.map((v) => {
                 return (
@@ -161,7 +161,7 @@ function ApplicationSettings() {
         </div>
         <div className="flex flex-col border-b border-black/20">
           <div className="flex gap-8">
-            <div className="font-bold text-2xl">학기 식수 신청</div>
+            <div className="font-bold text-2xl">学期の植樹申請</div>
             <div className="flex items-end gap-3">
               {kind.map((v) => {
                 return (

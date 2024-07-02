@@ -47,7 +47,7 @@ function Comments(props: CommentsType) {
                 });
               }}
             >
-              완료
+              完了
             </div>
             <div
               className="cursor-pointer hover:text-black"
@@ -55,7 +55,7 @@ function Comments(props: CommentsType) {
                 setOnModify(false);
               }}
             >
-              취소
+              キャンセル
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@ function Comments(props: CommentsType) {
                   setOnModify(true);
                 }}
               >
-                수정
+                修正
               </div>
               <div
                 className="cursor-pointer hover:text-black"
@@ -82,7 +82,7 @@ function Comments(props: CommentsType) {
                   });
                 }}
               >
-                삭제
+                削除
               </div>
             </div>
           ) : null}

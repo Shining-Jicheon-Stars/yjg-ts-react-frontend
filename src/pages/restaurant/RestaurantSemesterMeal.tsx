@@ -80,9 +80,9 @@ function RestaurantSemesterMeal() {
       return (
         <div className="absolute right-0 bg-white w-7/12 mt-3 p-10 rounded-md shadow-lg">
           <div className="flex items-center gap-10 mb-7">
-            <div className="font-bold text-2xl">유형 생성</div>
+            <div className="font-bold text-2xl">タイプ作成</div>
             <ListBtn
-              value="추가완료"
+              value="追加完了"
               color="bg-sky-400/90"
               onClick={() => {
                 createSemesterMealTypeData().then(() => {
@@ -102,7 +102,7 @@ function RestaurantSemesterMeal() {
           <div className="flex flex-col gap-7">
             <input
               type="text"
-              placeholder="유형 이름 작성"
+              placeholder="タイプ名の作成"
               value={newMealType.meal_type}
               onChange={(e) => {
                 let copy = { ...newMealType };
@@ -113,7 +113,7 @@ function RestaurantSemesterMeal() {
             />
             <input
               type="text"
-              placeholder="유형 구성 작성"
+              placeholder="タイプ構成の作成"
               value={newMealType.content}
               onChange={(e) => {
                 let copy = { ...newMealType };
@@ -124,7 +124,7 @@ function RestaurantSemesterMeal() {
             />
             <input
               type="text"
-              placeholder="유형 가격 작성"
+              placeholder="タイプ価格の作成"
               value={newMealType.price}
               onChange={(e) => {
                 let copy = { ...newMealType };
@@ -140,10 +140,10 @@ function RestaurantSemesterMeal() {
       return (
         <div className="absolute right-0 bg-white w-fit mt-3 p-10 rounded-md shadow-lg">
           <div className="flex items-center gap-5 mb-7">
-            <div className="font-bold text-2xl">유형 관리</div>
+            <div className="font-bold text-2xl">タイプ管理</div>
 
             <ListBtn
-              value="수정완료"
+              value="修正完了"
               color="bg-blue-400/90"
               onClick={() => {
                 if (selectedType.id) {
@@ -155,7 +155,7 @@ function RestaurantSemesterMeal() {
               }}
             />
             <ListBtn
-              value="삭제"
+              value="削除"
               color="bg-red-400/90"
               onClick={() => {
                 if (selectedType.id) {
@@ -178,7 +178,7 @@ function RestaurantSemesterMeal() {
           <div className="flex flex-col gap-7">
             <input
               type="text"
-              placeholder="유형 이름 수정"
+              placeholder="タイプ名の修正"
               value={newMealType.meal_type}
               onChange={(e) => {
                 let copy = { ...newMealType };
@@ -189,7 +189,7 @@ function RestaurantSemesterMeal() {
             />
             <input
               type="text"
-              placeholder="유형 구성 수정"
+              placeholder="タイプ構成の修正"
               value={newMealType.content}
               onChange={(e) => {
                 let copy = { ...newMealType };
@@ -200,7 +200,7 @@ function RestaurantSemesterMeal() {
             />
             <input
               type="text"
-              placeholder="유형 가격 수정"
+              placeholder="タイプ価格の修正"
               value={newMealType.price}
               onChange={(e) => {
                 let copy = { ...newMealType };
@@ -221,10 +221,10 @@ function RestaurantSemesterMeal() {
         <div className="absolute z-20 right-0 w-1/2">
           <div className="bg-white w-full p-10 rounded-md shadow-lg">
             <div className="flex items-center gap-10 mb-7">
-              <div className="font-bold text-2xl">학기 식수 유형 리스트</div>
+              <div className="font-bold text-2xl">学期の植樹タイプリスト</div>
               <div>
                 <ListBtn
-                  value="추가하기"
+                  value="追加"
                   color="bg-blue-400/90"
                   onClick={() => {
                     setModalStatus("create");
@@ -259,11 +259,11 @@ function RestaurantSemesterMeal() {
                     }}
                   >
                     <div className="text-xl text-cyan-600">
-                      {v.meal_type}유형
+                      {v.meal_type}類型
                     </div>
                     <div className="flex flex-col gap-2 text-sm mt-2 text-gray-500 ">
-                      <div>구성 : {v.content}</div>
-                      <div>가격 : {formatCurrency(v.price)}</div>
+                      <div>構成 : {v.content}</div>
+                      <div>価格 : {formatCurrency(v.price)}</div>
                     </div>
                   </div>
                 );
@@ -275,7 +275,7 @@ function RestaurantSemesterMeal() {
       ) : null}
       <div className="absolute right-0">
         <ListBtn
-          value="학기 식수 유형"
+          value="学期の植樹タイプ"
           color="bg-cyan-500/90"
           onClick={() => {
             setOnModal(true);

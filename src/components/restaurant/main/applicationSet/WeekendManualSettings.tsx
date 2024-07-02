@@ -21,13 +21,13 @@ function WeekendManualSettings(props: WeekendManualSettingsType) {
   // 주말 식수 신청 시간 양식
   const weekendInputTimes = {
     dayOfWeek: [
-      { key: 0, value: "일요일" },
-      { key: 1, value: "월요일" },
-      { key: 2, value: "화요일" },
-      { key: 3, value: "수요일" },
-      { key: 4, value: "목요일" },
-      { key: 5, value: "금요일" },
-      { key: 6, value: "토요일" },
+      { key: 0, value: "日曜日" },
+      { key: 1, value: "月曜日" },
+      { key: 2, value: "火曜日" },
+      { key: 3, value: "水曜日" },
+      { key: 4, value: "木曜日" },
+      { key: 5, value: "金曜日" },
+      { key: 6, value: "土曜日" },
     ],
     time: Array.from(
       { length: 24 },
@@ -77,9 +77,7 @@ function WeekendManualSettings(props: WeekendManualSettingsType) {
       );
     } else {
       return (
-        <div className="font-bold text-lg text-gray-400">
-          값을 설정해주세요.
-        </div>
+        <div className="font-bold text-lg text-gray-400">設定お願いします</div>
       );
     }
   };
@@ -149,7 +147,7 @@ function WeekendManualSettings(props: WeekendManualSettingsType) {
           </div>
           <div className="flex gap-4">
             <ListBtn
-              value="설정"
+              value="設定"
               color="bg-blue-400/90"
               onClick={() => {
                 patchApplyWeekendData().then(() => {
@@ -159,7 +157,7 @@ function WeekendManualSettings(props: WeekendManualSettingsType) {
               }}
             />
             <ListBtn
-              value="취소"
+              value="キャンセル"
               color="bg-red-400/90"
               onClick={() => {
                 setOnModify(false);
@@ -172,7 +170,7 @@ function WeekendManualSettings(props: WeekendManualSettingsType) {
           <div className="flex-1 px-4">{getAutoData()}</div>
           <div>
             <ListBtn
-              value="설정"
+              value="設定"
               color="bg-orange-400/90"
               onClick={() => {
                 setOnModify(true);

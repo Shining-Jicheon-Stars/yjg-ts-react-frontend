@@ -94,7 +94,7 @@ function ModalAddPlan(props: { setOnModal: (onModal: boolean) => void }) {
     <div className="fixed flex items-center justify-center z-40 inset-0 bg-black/35">
       <div className="bg-white w-4/6 h-4/5 py-12 overflow-auto rounded-xl">
         <section className="relative px-8 gap-6 w-full h-5/6 flex flex-col">
-          <div className="font-bold text-3xl">식단표 추가</div>
+          <div className="font-bold text-3xl">献立表追加</div>
           <div
             className="border-dashed border-2 border-gray-400 py-12 flex flex-col justify-center items-center cursor-pointer"
             onClick={handleButtonClick}
@@ -124,14 +124,14 @@ function ModalAddPlan(props: { setOnModal: (onModal: boolean) => void }) {
 
         <footer className="flex flex-1 justify-end bottom-0 px-8 gap-2 mt-16 ">
           <ListBtn
-            value="업로드"
+            value="アップロード"
             color="bg-blue-400/90"
             onClick={() => {
               postExcelFile();
             }}
           />
           <ListBtn
-            value="취소"
+            value="キャンセル"
             color="bg-red-400/90"
             onClick={() => {
               setOnModal(false);

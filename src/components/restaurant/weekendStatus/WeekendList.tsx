@@ -12,16 +12,16 @@ import { formatPhoneNumber } from "../../../utils/formatPhoneNum";
 
 function WeekendList() {
   const headList = [
-    { value: "이름", col: "col-span-1" },
-    { value: "유형", col: "col-span-1" },
-    { value: "신청요일", col: "col-span-1" },
-    { value: "입금여부", col: "col-span-1" },
+    { value: "名前", col: "col-span-1" },
+    { value: "類型", col: "col-span-1" },
+    { value: "リクエスト曜日", col: "col-span-1" },
+    { value: "入金可否確認", col: "col-span-1" },
     { value: "", col: "col-span-1" },
   ];
   // 주말 식수 리스트 값
   const [weekendList, setWeekendList] = useState<WeekendListType[]>([]);
   // 태그 리스트
-  const tagList = [{ value: "", name: "이름" }];
+  const tagList = [{ value: "", name: "名前" }];
   // 검색 바 태그 값
   const [tag, setTag] = useState("");
   // 검색 바 제목 값
@@ -87,7 +87,7 @@ function WeekendList() {
   return (
     <div className="flex-1 flex flex-col gap-4">
       <div className="flex items-center gap-4 font-bold pr-4">
-        <div className="font-bold text-3xl px-3">주말 신청 현황</div>
+        <div className="font-bold text-3xl px-3">週末の申し込み状況</div>
         <div className="flex-1 flex justify-center">
           <SearchBar
             tag={tag}
@@ -102,22 +102,22 @@ function WeekendList() {
           <div className="absolute top-10 right-1/4 center rounded-xl overflow-hidden font-bold border border-black/20 shadow-lg">
             <div className="bg-gray-200 h-10"></div>
             <div className="bg-white px-32 py-8 grid grid-cols-2 gap-4 h-full">
-              <div className="text-right pr-10">학번 : </div>
+              <div className="text-right pr-10">学番 : </div>
               <div>{detailData.student_id}</div>
-              <div className="text-right pr-10">이름 : </div>
+              <div className="text-right pr-10">名前 : </div>
               <div>{detailData.name}</div>
-              <div className="text-right pr-10">휴대전화 : </div>
+              <div className="text-right pr-10">携帯電話 : </div>
               <div>{formatPhoneNumber(detailData.phone_number)}</div>
-              <div className="text-right pr-10">유형 : </div>
+              <div className="text-right pr-10">類型 : </div>
               <div>{detailData.meal_type}</div>
-              <div className="text-right pr-10">신청요일 : </div>
+              <div className="text-right pr-10">リクエスト曜日 : </div>
               <div className="flex gap-2 justify-start items-center">
-                {detailData.sat ? <div>토요일</div> : null}
-                {detailData.sun ? <div>일요일</div> : null}
+                {detailData.sat ? <div>土曜日</div> : null}
+                {detailData.sun ? <div>日曜日</div> : null}
               </div>
-              <div className="text-right pr-10">환불유형 :</div>
-              <div>{detailData.refund ? "환불" : "편의점 도시락"}</div>
-              <div className="text-right pr-10">입금 :</div>
+              <div className="text-right pr-10">払い戻しタイプ :</div>
+              <div>{detailData.refund ? "払い戻し" : "お弁当"}</div>
+              <div className="text-right pr-10">入金 :</div>
               <div className="flex gap-5">
                 <label className="flex items-center">
                   <input
@@ -128,7 +128,7 @@ function WeekendList() {
                       setPayment(1);
                     }}
                   />
-                  <span className="ml-2 text-gray-700">완료</span>
+                  <span className="ml-2 text-gray-700">完了</span>
                 </label>
                 <label className="flex items-center">
                   <input
@@ -139,12 +139,12 @@ function WeekendList() {
                       setPayment(0);
                     }}
                   />
-                  <span className="ml-2 text-gray-700">미완료</span>
+                  <span className="ml-2 text-gray-700">未完了</span>
                 </label>
               </div>
               <div className="col-span-2 my-1"></div>
               <ListBtn
-                value="저장"
+                value="save"
                 color="bg-cyan-500/80"
                 onClick={() => {
                   postWeekendUserPayment(detailData.id).then(() => {
@@ -154,7 +154,7 @@ function WeekendList() {
                 }}
               />
               <ListBtn
-                value="닫기"
+                value="close"
                 color="bg-red-400/90"
                 onClick={() => {
                   setDetailData(undefined);
@@ -173,15 +173,15 @@ function WeekendList() {
                   {user.weekend_meal_type.meal_type}
                 </div>
                 <div className="flex gap-4 justify-center items-center text-lg">
-                  {user.sat ? <div>토요일</div> : null}
-                  {user.sun ? <div>일요일</div> : null}
+                  {user.sat ? <div>土曜日</div> : null}
+                  {user.sun ? <div>日曜日</div> : null}
                 </div>
                 <div className="my-auto text-lg py-5">
-                  {user.payment ? "완료" : "미완료"}
+                  {user.payment ? "完了" : "未完了"}
                 </div>
                 <div className="my-auto text-lg">
                   <ListBtn
-                    value="상세보기"
+                    value="詳細"
                     color="bg-blue-400/90"
                     onClick={() => {
                       setDetailData({

@@ -8,8 +8,8 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 function BusScheduleList(props: BusScheduleListType) {
   const { schedule, id } = props;
   const headList = [
-    { value: "역이름", col: "col-span-1" },
-    { value: "시간", col: "col-span-1" },
+    { value: "駅の名前", col: "col-span-1" },
+    { value: "時間", col: "col-span-1" },
     { value: "", col: "col-span-1" },
   ];
 
@@ -82,14 +82,14 @@ function BusScheduleList(props: BusScheduleListType) {
             />
             <div className="flex gap-3 items-center justify-center">
               <ListBtn
-                value="생성"
+                value="生成"
                 color="bg-blue-400/90"
                 onClick={() => {
                   createScheduleMutation();
                 }}
               />
               <ListBtn
-                value="취소"
+                value="キャンセル"
                 color="bg-red-400/90"
                 onClick={() => {
                   setCreateSchedule(false);
@@ -181,14 +181,14 @@ function ScheduleList(props: { schedule: ScheduleType }) {
           </div>
           <div className="m-auto border-b py-4 w-full space-x-5 text-center">
             <ListBtn
-              value="수정완료"
+              value="修正完了"
               color="bg-sky-400/90"
               onClick={() => {
                 patchScheduleMutation(schedule.id);
               }}
             />
             <ListBtn
-              value="취소"
+              value="キャンセル"
               color="bg-red-400/90"
               onClick={() => {
                 setOnModify(false);
@@ -206,7 +206,7 @@ function ScheduleList(props: { schedule: ScheduleType }) {
           </div>
           <div className="m-auto border-b py-4 w-full space-x-5 text-center">
             <ListBtn
-              value="수정"
+              value="修正"
               color="bg-sky-400/90"
               onClick={() => {
                 setOnModify(true);
@@ -215,7 +215,7 @@ function ScheduleList(props: { schedule: ScheduleType }) {
               }}
             />
             <ListBtn
-              value="삭제"
+              value="削除"
               color="bg-red-400/90"
               onClick={() => {
                 deleteScheduleMutation(schedule.id);

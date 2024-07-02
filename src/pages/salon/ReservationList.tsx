@@ -18,10 +18,10 @@ function ReservationList() {
   const [unreservedUser, setUnreservedUser] = useState([]);
   //리스트 헤드, 데이터 틀
   const headList = [
-    { value: "이름", col: "col-span-1" },
-    { value: "휴대폰", col: "col-span-2" },
-    { value: "시간", col: "col-span-1" },
-    { value: "시술유형", col: "col-span-2" },
+    { value: "名前", col: "col-span-1" },
+    { value: "電話番号", col: "col-span-2" },
+    { value: "時間", col: "col-span-1" },
+    { value: "施術タイプ", col: "col-span-2" },
   ];
   const dataList = [
     { value: "user_name", col: "col-span-1" },
@@ -76,8 +76,8 @@ function ReservationList() {
     <div className="flex gap-10">
       <div className="flex flex-col gap-4">
         <div className="flex justify-between px-3 gap-6">
-          <CountCard header="확정 예약자" count={reservationUser.length} />
-          <CountCard header="승인 대기자" count={unreservedUser.length} />
+          <CountCard header="予約者" count={reservationUser.length} />
+          <CountCard header="待機者" count={unreservedUser.length} />
         </div>
         <S.CalendarBox className="flex-auto">
           <S.StyleCalendar
@@ -91,7 +91,7 @@ function ReservationList() {
 
       <div className="flex-1">
         <div className="text-2xl font-bold mb-4 tracking-tighter text-left">
-          예약 확정 목록
+          予約確定リスト
         </div>
         <div className="bg-white p-5 h-full rounded-2xl overflow-auto shadow-lg">
           <div className="grid grid-cols-6 text-center  border-black/10 shadow-lg overflow-hidden rounded-2xl">

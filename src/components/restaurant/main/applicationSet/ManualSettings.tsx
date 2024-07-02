@@ -21,7 +21,7 @@ function ManualSettings(props: {
 
   return (
     <div className="flex gap-2 items-center px-10 py-4">
-      <p className="flex font-bold text-lg">닫힘 ⇽⇾ 열림</p>
+      <p className="flex font-bold text-lg">close ⇽⇾ open</p>
       <label className="relative cursor-pointer items-center">
         <input
           id="switch-3"

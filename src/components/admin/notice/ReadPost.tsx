@@ -55,12 +55,12 @@ function ReadPost() {
     <div className="flex flex-col gap-4">
       <div className="flex border-b-2 border-black items-end">
         <div className="flex-1 text-4xl font-bold tracking-tighter text-left p-4">
-          제목 : {notice?.title}
+          タイトル : {notice?.title}
         </div>
 
         <div className="flex flex-col p-2 font-bold text-right text-lg">
-          <div>작성자 : {notice?.tag}</div>
-          {notice?.urgent ? <div>태그 : 🚨 {notice.tag}</div> : null}
+          <div>作成者 : {notice?.tag}</div>
+          {notice?.urgent ? <div>タグ : 🚨 {notice.tag}</div> : null}
         </div>
       </div>
 
@@ -97,7 +97,7 @@ function ReadPost() {
       </div>
       <div className="flex gap-4">
         <ListBtn
-          value="수정"
+          value="修正"
           color="bg-sky-400/90"
           onClick={() => {
             navigate(`/main/admin/modifying/${id}`, {
@@ -106,7 +106,7 @@ function ReadPost() {
           }}
         />
         <ListBtn
-          value="삭제"
+          value="削除"
           color="bg-red-400/90"
           onClick={() => {
             if (window.confirm("삭제하시겠습니까?")) {
@@ -119,7 +119,7 @@ function ReadPost() {
         />
         <div className="flex flex-1 justify-end">
           <ListBtn
-            value="나가기"
+            value="close"
             color="bg-gray-400/90"
             onClick={() => {
               navigate("/main/admin/notice");

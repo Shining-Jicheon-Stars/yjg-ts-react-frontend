@@ -22,26 +22,26 @@ function BusTimeTable() {
   const semesterList = [
     {
       state: 1,
-      head: "학기",
+      head: "学期",
     },
     {
       state: 0,
-      head: "방학",
+      head: "休み",
     },
   ];
   const weekendList = [
     {
       state: 0,
-      head: "평일",
+      head: "平日",
     },
     {
       state: 1,
-      head: "주말",
+      head: "週末",
     },
   ];
   const routeList = [
-    { state: "s_bokhyun", head: "복현캠퍼스 -> 영어마을" },
-    { state: "s_english", head: "영어마을 -> 복현캠퍼스" },
+    { state: "s_bokhyun", head: "ボクヒョン -> 英語村" },
+    { state: "s_english", head: "英語村 -> ボクヒョン" },
   ];
 
   const queryClient = useQueryClient();
@@ -96,20 +96,20 @@ function BusTimeTable() {
     <div className="flex flex-col gap-6 p-2">
       <div className="flex gap-10">
         <ChoiceList
-          head="1. 학기/방학 선택"
+          head="1. 学期/休み"
           state={semester}
           setState={setSemester}
           list={semesterList}
         />
         <ChoiceList
-          head="2. 평일/주말 선택"
+          head="2. 平日/週末"
           state={weekend}
           setState={setWeekend}
           list={weekendList}
         />
       </div>
       <ChoiceList
-        head="3. 노선 선택"
+        head="3. 路線"
         state={route}
         setState={setRoute}
         list={routeList}
@@ -117,14 +117,14 @@ function BusTimeTable() {
       <div>
         <div className="flex">
           <div className="flex-1 text-xl font-bold p-4 tracking-tighter">
-            노선 관리
+            路線管理
           </div>
           <div className="flex gap-2 justify-end items-end">
             <div>
               <input
                 type="text"
                 className="p-2 w-32 rounded-lg text-center focus:outline-none focus:ring-2 focus:rounded-xl focus:ring-blue-500 shadow-md"
-                placeholder="카테고리 명"
+                placeholder="カテゴリ名"
                 onChange={(e) => {
                   setNewCategoryName(e.target.value);
                 }}
@@ -133,7 +133,7 @@ function BusTimeTable() {
             </div>
             <div>
               <ListBtn
-                value="생성"
+                value="生成"
                 color="bg-blue-400/90"
                 onClick={() => {
                   createCategoryMutation();

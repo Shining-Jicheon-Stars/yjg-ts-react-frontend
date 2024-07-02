@@ -19,11 +19,11 @@ function SalonPrice() {
   const kind = [
     {
       state: "male",
-      head: "남자",
+      head: "男性",
     },
     {
       state: "female",
-      head: "여자",
+      head: "女性",
     },
   ];
 
@@ -83,7 +83,7 @@ function SalonPrice() {
       />
       <div className="relative flex border-b-2 border-black">
         <div className="flex items-end gap-2 flex-1 text-4xl font-bold p-4 tracking-tighter text-left">
-          <span className="mr-6">💈 가격표 관리</span>
+          <span className="mr-6">💈 値札管理</span>
           {kind.map((v) => {
             return (
               <span
@@ -106,7 +106,7 @@ function SalonPrice() {
             <input
               type="text"
               className="p-2 w-32 text-center focus:outline-none focus:ring-2 focus:rounded-xl focus:ring-blue-400 rounded-md shadow-md"
-              placeholder="카테고리 명"
+              placeholder="カテゴリー"
               onChange={(e) => {
                 setNewCategoryName(e.target.value);
               }}
@@ -115,7 +115,7 @@ function SalonPrice() {
           </div>
           <div>
             <ListBtn
-              value="생성"
+              value="生成"
               color="bg-blue-400/90"
               onClick={() => {
                 createCategory().then(() => {
@@ -132,7 +132,7 @@ function SalonPrice() {
               setPriceTag(true);
             }}
           />
-          <div className="text-xs font-bold text-center">가격표</div>
+          <div className="text-xs font-bold text-center">値札</div>
         </div>
       </div>
       <div className="mt-16">
@@ -149,7 +149,7 @@ function SalonPrice() {
       </div>
       <div className="flex border-b-2 border-black my-10">
         <div className="flex items-end gap-2 flex-1 text-4xl font-bold p-4 tracking-tighter text-left">
-          <span className="mr-6">💈 영업 시간 설정</span>
+          <span className="mr-6">💈 営業時間の設定</span>
         </div>
       </div>
       <div className="flex flex-col gap-6 p-8 w-1/2 bg-white rounded-2xl shadow-lg">

@@ -13,8 +13,8 @@ import Pagination from "../../components/post/page/Pagination";
 
 function Notice() {
   const headList = [
-    { value: "제목", col: "col-span-4" },
-    { value: "태그", col: "col-span-1" },
+    { value: "タイトル", col: "col-span-4" },
+    { value: "タグ", col: "col-span-1" },
     { value: "", col: "col-span-1" },
   ];
   const dataList = [
@@ -22,7 +22,7 @@ function Notice() {
     { value: "tag", col: "col-span-1" },
     [
       {
-        value: "조회",
+        value: "照会",
         color: "bg-cyan-500",
         onClick: (user: NoticeListType) => {
           navigate(`/main/admin/reading/${user.id}`, {
@@ -36,11 +36,11 @@ function Notice() {
   const [noticeList, setNoticeList] = useState<NoticeListType[]>([]);
   // 태그 리스트
   const tagList = [
-    { value: "", name: "제목" },
-    { value: "admin", name: "행정" },
-    { value: "salon", name: "미용실" },
-    { value: "restaurant", name: "식당" },
-    { value: "bus", name: "버스" },
+    { value: "", name: "タイトル" },
+    { value: "admin", name: "行政" },
+    { value: "salon", name: "美容室" },
+    { value: "restaurant", name: "食堂" },
+    { value: "bus", name: "バス" },
   ];
   // 공지사항 파라미터 값
   const [noticeParams, setNoticeParams] = useState<getNoticeDataType>({
@@ -184,14 +184,14 @@ function Notice() {
   return (
     <div className="flex gap-7 pr-10">
       <div className="flex flex-col ml-4">
-        <CountCard header="외박 신청자" count={sleepMember} />
-        <CountCard header="외출 신청자" count={goMember} />
-        <CountCard header="회의실 예약자" count={roomReservation} />
-        <CountCard header="미처리 A/S건" count={unprocessedCase} />
+        <CountCard header="外泊" count={sleepMember} />
+        <CountCard header="外出" count={goMember} />
+        <CountCard header="会議室" count={roomReservation} />
+        <CountCard header="未処理A/S" count={unprocessedCase} />
       </div>
       <div className="flex-1 flex flex-col gap-4">
         <div className="flex items-center gap-4  font-bold text-3xl pr-4">
-          <div>공지사항</div>
+          <div>お知らせ</div>
           <div className="flex-1 flex justify-center">
             <SearchBar
               tag={tag}
@@ -201,7 +201,7 @@ function Notice() {
             />
           </div>
           <ListBtn
-            value="작성"
+            value="作成"
             color="bg-cyan-500/90"
             onClick={() => {
               navigate("/main/admin/writing", { state: { type: "Post" } });

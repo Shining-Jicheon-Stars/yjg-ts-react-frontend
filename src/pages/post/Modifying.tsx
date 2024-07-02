@@ -96,17 +96,17 @@ function Modifying() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col p-4">
       <div className="flex">
-        <div className="font-bold text-3xl mb-10">공지사항 수정</div>
+        <div className="font-bold text-3xl mb-10">お知らせの修正</div>
         <div className="flex-1"></div>
         <div className="flex gap-5 h-fit">
           <ListBtn
-            value="수정완료"
+            value="完了"
             color="bg-blue-400/90"
             type="submit"
             onClick={() => {}}
           />
           <ListBtn
-            value="취소"
+            value="キャンセル"
             color="bg-red-400/90"
             onClick={() => {
               navigate(-1);
@@ -117,10 +117,10 @@ function Modifying() {
       <FormInput
         type="text"
         name="title"
-        label="제목"
-        placeholder="제목을 입력해주세요."
+        label="タイトル"
+        placeholder="タイトルの入力をお願いします"
         register={register("title", {
-          required: "제목을 입력해주세요.",
+          required: "タイトルの入力をお願いします",
         })}
         errorMessage={errors?.title && errors.title.message}
       />
@@ -131,15 +131,15 @@ function Modifying() {
           </label>
           <select
             {...register("tag", {
-              required: "태그를 선택해주세요.",
+              required: "タグの選択をお願いします",
             })}
             id="tag"
             className="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 shadow-md"
           >
-            <option value="admin">행정</option>
-            <option value="restaurant">식수</option>
-            <option value="salon">미용실</option>
-            <option value="bus">버스</option>
+            <option value="admin">行政</option>
+            <option value="restaurant">食堂</option>
+            <option value="salon">美容室</option>
+            <option value="bus">バス</option>
           </select>
         </div>
         <div className="flex">
@@ -149,7 +149,7 @@ function Modifying() {
               type="checkbox"
               className="form-checkbox h-5 w-5 text-gray-600 shadow-sm"
             />
-            <span className="ml-2 text-gray-700">긴급공지</span>
+            <span className="ml-2 text-gray-700">緊急のお知らせ</span>
           </label>
         </div>
       </div>
@@ -166,7 +166,7 @@ function Modifying() {
           rules={{
             validate: (value) =>
               (value && value.trim() !== "" && value !== "<p><br></p>") ||
-              "본문을 입력해주세요.",
+              "本文の入力をお願いします",
           }}
           render={({ field }) => (
             <Editor value={field.value} setValue={field.onChange} />

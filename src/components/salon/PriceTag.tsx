@@ -39,7 +39,7 @@ function PriceTag(props: PriceTagType) {
                 }}
               />
             </div>
-            <div className="text-3xl">✨ 미용실 가격표 ✨</div>
+            <div className="text-3xl">✨ 美容室価格表 ✨</div>
             <div className="flex mt-7 text-lg border-b border-white pb-6">
               <div className="flex-1 flex flex-col gap-4">
                 <div>MAN</div>

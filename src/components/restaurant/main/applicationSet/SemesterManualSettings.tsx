@@ -62,11 +62,11 @@ function SemesterManualSettings(props: SemesterManualSettingsType) {
       return (
         <div className="flex font-bold gap-4 text-lg">
           <div>
-            {autoData.start_month}월 - {autoData.start_date}일
+            {autoData.start_month}月 - {autoData.start_date}日
           </div>
           <div>~</div>
           <div>
-            {autoData.end_month}월 - {autoData.end_date}일
+            {autoData.end_month}月 - {autoData.end_date}日
           </div>
         </div>
       );
@@ -95,7 +95,7 @@ function SemesterManualSettings(props: SemesterManualSettingsType) {
                 }}
               >
                 {semesterInputTimes.month.map((v) => {
-                  return <option value={v}>{v}월</option>;
+                  return <option value={v}>{v}月</option>;
                 })}
               </select>
               <select
@@ -108,7 +108,7 @@ function SemesterManualSettings(props: SemesterManualSettingsType) {
                 }}
               >
                 {semesterInputTimes.day.map((v) => {
-                  return <option value={v}>{v}일</option>;
+                  return <option value={v}>{v}日</option>;
                 })}
               </select>
             </div>
@@ -144,7 +144,7 @@ function SemesterManualSettings(props: SemesterManualSettingsType) {
           </div>
           <div className="flex gap-4">
             <ListBtn
-              value="설정"
+              value="設定"
               color="bg-blue-400/90"
               onClick={() => {
                 patchApplyWeekendData().then(() => {
@@ -154,7 +154,7 @@ function SemesterManualSettings(props: SemesterManualSettingsType) {
               }}
             />
             <ListBtn
-              value="취소"
+              value="キャンセル"
               color="bg-red-400/90"
               onClick={() => {
                 setOnModify(false);
@@ -167,7 +167,7 @@ function SemesterManualSettings(props: SemesterManualSettingsType) {
           <div className="flex-1 px-4">{getAutoData()}</div>
           <div>
             <ListBtn
-              value="설정"
+              value="設定"
               color="bg-orange-400/90"
               onClick={() => {
                 setOnModify(true);

@@ -27,10 +27,10 @@ function SalonPending() {
   const [head, setHead] = useState<string>();
   // 리스트 헤드, 데이터 틀
   const headList = [
-    { value: "이름", col: "col-span-1" },
-    { value: "시간", col: "col-span-1" },
-    { value: "시술유형", col: "col-span-1" },
-    { value: "승인처리", col: "col-span-1" },
+    { value: "名前", col: "col-span-1" },
+    { value: "時間", col: "col-span-1" },
+    { value: "施術タイプ", col: "col-span-1" },
+    { value: "承認処理", col: "col-span-1" },
   ];
   const dataList = [
     { value: "user_name", col: "col-span-1" },
@@ -38,7 +38,7 @@ function SalonPending() {
     { value: "service_name", col: "col-span-1" },
     [
       {
-        value: "승인",
+        value: "承認",
         color: "bg-blue-400/90",
         onClick: (data: GuestType) => {
           if (window.confirm("승인하시겠습니까?")) {
@@ -55,7 +55,7 @@ function SalonPending() {
         },
       },
       {
-        value: "거절",
+        value: "断り",
         color: "bg-red-400/90",
         onClick: (data: GuestType) => {
           patchData(data.id, false).then(() => {
@@ -184,7 +184,7 @@ function SalonPending() {
     } else if (selectedTime?.available) {
       return (
         <ListBtn
-          value="마감"
+          value="close"
           color="bg-red-400/90"
           onClick={() => {
             postBreakData(selectedTime.time).then(() => {
@@ -197,7 +197,7 @@ function SalonPending() {
     } else if (selectedTime?.available === false) {
       return (
         <ListBtn
-          value="오픈"
+          value="open"
           color="bg-sky-400/90"
           onClick={() => {
             deleteBreakData({
@@ -225,7 +225,7 @@ function SalonPending() {
           />
         </S.CalendarBox>
         <div className="  text-black font-bold text-xl my-2 text-center">
-          ⏱ 시간표
+          ⏱ 時間割
         </div>
         <div className="bg-white text-white rounded-lg grid grid-cols-4 text-center p-4 h-50 gap-4 overflow-auto shadow-lg">
           {timeData.map((v: TimeData) => {
@@ -254,7 +254,7 @@ function SalonPending() {
 
       <div className="flex-1 flex flex-col">
         <div className="flex align-middle text-2xl font-bold tracking-tight m-2 text-black">
-          <div className="flex-1">{head} 예약대기자</div>
+          <div className="flex-1">{head} 予約待ち</div>
           <div className="flex align-middle">{breakBtn()}</div>
         </div>
         <div className="bg-white rounded-2xl h-5/6 p-4 overflow-auto shadow-lg">

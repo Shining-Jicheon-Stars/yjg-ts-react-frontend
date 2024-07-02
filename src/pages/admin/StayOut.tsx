@@ -14,9 +14,9 @@ import LoadingPage from "../../components/LoadingPage";
 
 function StayOut() {
   const headList = [
-    { value: "학번", col: "col-span-1" },
-    { value: "이름", col: "col-span-1" },
-    { value: "외출일", col: "col-span-2" },
+    { value: "学番", col: "col-span-1" },
+    { value: "名前", col: "col-span-1" },
+    { value: "外出日", col: "col-span-2" },
     { value: "", col: "col-span-1" },
   ];
   const dataList = [
@@ -25,7 +25,7 @@ function StayOut() {
     { value: "start_date", col: "col-span-2" },
     [
       {
-        value: "조회",
+        value: "照会",
         color: "bg-cyan-500",
         onClick: (user: AbsenceListType) => {
           navigate(`/main/admin/reading/${user.id}`, {
@@ -43,11 +43,11 @@ function StayOut() {
   const kind = [
     {
       state: "sleep",
-      head: "외박 인원",
+      head: "外泊",
     },
     {
       state: "go",
-      head: "외출 인원",
+      head: "外出",
     },
   ];
   // 외박,외출 데이터 값
@@ -59,7 +59,7 @@ function StayOut() {
     date: formattedDate.current,
   });
   // 태그 리스트
-  const tagList = [{ value: "name", name: "이름" }];
+  const tagList = [{ value: "name", name: "名前" }];
   // 검색 바 태그 값
   const [tag, setTag] = useState("");
   // 검색 바 제목 값
@@ -179,8 +179,8 @@ function StayOut() {
     <div className="flex gap-7">
       <div className="flex-col">
         <div className="flex justify-between px-3 gap-6">
-          <CountCard header="외박 신청" count={sleepMember} />
-          <CountCard header="외출 신청" count={goMember} />
+          <CountCard header="外泊" count={sleepMember} />
+          <CountCard header="外出" count={goMember} />
         </div>
         <S.CalendarBox className="flex-auto">
           <S.StyleCalendar

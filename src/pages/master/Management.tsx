@@ -9,9 +9,9 @@ import CheckPower from "../../components/master/CheckPower";
 
 function Management() {
   const headList = [
-    { value: "이름", col: "col-span-1" },
-    { value: "전화번호", col: "col-span-1" },
-    { value: "메일", col: "col-span-2" },
+    { value: "名前", col: "col-span-1" },
+    { value: "電話番号", col: "col-span-1" },
+    { value: "メール", col: "col-span-2" },
     { value: "", col: "col-span-1" },
   ];
   const dataList = [
@@ -20,14 +20,14 @@ function Management() {
     { value: "email", col: "col-span-2" },
     [
       {
-        value: "권한설정",
+        value: "権限設定",
         color: "bg-blue-400/90",
         onClick: (data: GetUserData) => {
           setOnModal(data);
         },
       },
       {
-        value: "삭제",
+        value: "削除",
         color: "bg-red-400/90",
         onClick: (data: GetUserData) => {
           if (window.confirm("삭제하시겠습니까?")) {
@@ -147,9 +147,9 @@ function Management() {
             <div className="grid grid-cols-3 p-6 text-center text-2xl font-bold gap-5">
               <div className="col-span-3 text-xl text-left font-bold mb-10 ml-5">
                 <span className="text-blue-700 text-3xl">{onModal.name} </span>
-                님의 관리자 권한
+                様の管理者権限
               </div>
-              <div className="text-lg">권한</div>
+              <div className="text-lg">LIST</div>
               <div className="text-lg">ON</div>
               <div className="text-lg">OFF</div>
               {privilegesData.map((v) => {
@@ -165,7 +165,7 @@ function Management() {
             </div>
             <div className="flex justify-end mt-20 mr-14 gap-4">
               <ListBtn
-                value="저장"
+                value="save"
                 color="bg-blue-400/90"
                 onClick={() => {
                   patchPowerMutation(userPower);
@@ -173,7 +173,7 @@ function Management() {
                 }}
               />
               <ListBtn
-                value="취소"
+                value="close"
                 color="bg-red-400/90"
                 onClick={() => {
                   setOnModal(undefined);
@@ -185,10 +185,10 @@ function Management() {
       ) : null}
       <div className="flex">
         <div className="flex-1 text-2xl font-bold tracking-tighter text-left">
-          관리자 리스트
+          管理者リスト
         </div>
         <div className="self-end text-right p-4 tracking-widest font-semibold">
-          {approvedUsers.length}명
+          {approvedUsers.length}名
         </div>
       </div>
       <div className="bg-white p-4 h-5/6 rounded-2xl overflow-auto shadow-lg">

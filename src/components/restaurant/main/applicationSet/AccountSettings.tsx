@@ -45,12 +45,12 @@ function AccountSettings() {
 
   return (
     <div className="flex flex-col">
-      <div className="font-bold text-2xl">계좌 설정</div>
+      <div className="font-bold text-2xl">口座設定</div>
       {onModify ? (
         <div className="flex items-start gap-3">
           <div className="flex flex-col flex-1 gap-2 p-4 font-semibold text-lg">
             <div className="flex gap-2">
-              <div>은행 명 : </div>
+              <div>銀行名 : </div>
               <input
                 className="border-b-2 border-black pl-1"
                 type="text"
@@ -63,7 +63,7 @@ function AccountSettings() {
               />
             </div>
             <div className="flex gap-2">
-              <div>계좌번호 : </div>
+              <div>口座番号 : </div>
               <input
                 className="border-b-2 border-black pl-1"
                 type="text"
@@ -76,7 +76,7 @@ function AccountSettings() {
               />
             </div>
             <div className="flex gap-2">
-              <div>예금자 명 : </div>
+              <div>預金者名 : </div>
               <input
                 className="border-b-2 border-black pl-1"
                 type="text"
@@ -90,7 +90,7 @@ function AccountSettings() {
             </div>
           </div>
           <ListBtn
-            value="수정완료"
+            value="修正完了"
             color="bg-blue-400/90"
             onClick={() => {
               patchAccountData().then(() => {
@@ -100,7 +100,7 @@ function AccountSettings() {
             }}
           />
           <ListBtn
-            value="취소"
+            value="キャンセル"
             color="bg-red-400/90"
             onClick={() => {
               setOnModify(false);
@@ -111,20 +111,20 @@ function AccountSettings() {
         <div className="flex items-start ">
           <div className="flex flex-col flex-1 gap-1 p-4 font-semibold text-lg">
             <div className="flex gap-2">
-              <div>은행 명 : </div>
+              <div>銀行名 : </div>
               <div>{accountData.bank_name}</div>
             </div>
             <div className="flex gap-2">
-              <div>계좌번호 : </div>
+              <div>口座番号 : </div>
               <div>{accountData.account}</div>
             </div>
             <div className="flex gap-2">
-              <div>예금자 명 : </div>
+              <div>預金者名 : </div>
               <div>{accountData.name}</div>
             </div>
           </div>
           <ListBtn
-            value="수정"
+            value="修整"
             color="bg-blue-400/90"
             onClick={() => {
               setNewAccountData(accountData);

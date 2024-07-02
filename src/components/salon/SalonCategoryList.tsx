@@ -89,7 +89,7 @@ function SalonCategoryList(props: SalonCategoryType) {
               className="w-32 text-center outline-none border-b-2 border-gray-400"
             />
             <ListBtn
-              value="완료"
+              value="完了"
               color="bg-sky-400/90"
               onClick={() => {
                 setModify(false);
@@ -99,7 +99,7 @@ function SalonCategoryList(props: SalonCategoryType) {
               }}
             />
             <ListBtn
-              value="취소"
+              value="キャンセル"
               color="bg-red-400/90"
               onClick={() => {
                 setModify(false);
@@ -110,14 +110,14 @@ function SalonCategoryList(props: SalonCategoryType) {
           <>
             <div className="w-32 text-center">{category}</div>
             <ListBtn
-              value="수정"
+              value="修整"
               color="bg-orange-400/90"
               onClick={() => {
                 setModify(true);
               }}
             />
             <ListBtn
-              value="삭제"
+              value="削除"
               color="bg-red-400/90"
               onClick={() => {
                 if (window.confirm("삭제하시겠습니까?")) {
@@ -141,7 +141,7 @@ function SalonCategoryList(props: SalonCategoryType) {
                 getServiceData({ category_id: id, gender: gender });
             }}
           >
-            {dropdown ? "닫기" : "열기"}
+            {dropdown ? "close" : "open"}
           </span>
         </div>
       </div>

@@ -107,10 +107,10 @@ function SetBusinessTime() {
         <div className="rounded-lg grid grid-cols-6 text-center px-8 pb-6 gap-5">
           <div className="relative font-bold text-lg col-span-6 mb-3">
             {selectedWeek.date}
-            {selectedWeek.open ? " 영업일" : ""}
+            {selectedWeek.open ? " 営業日" : ""}
             <div className="absolute -right-3 -top-1">
               <ListBtn
-                value="재설정"
+                value="リセット"
                 color="bg-blue-400/90"
                 onClick={() => {
                   setOnchange(true);
@@ -131,7 +131,7 @@ function SetBusinessTime() {
             </>
           ) : (
             <div className="col-span-6 text-xl font-bold text-gray-400 p-6">
-              영업일이 아닙니다
+              営業日ではありません
             </div>
           )}
         </div>
@@ -189,7 +189,7 @@ function SetBusinessTime() {
           ) : null}
           <div className="flex gap-5 justify-center col-span-6 mt-3">
             <ListBtn
-              value="설정완료"
+              value="設定完了"
               color="bg-blue-400/90"
               onClick={() => {
                 patchBusinessTimeData().then(() => {
@@ -199,7 +199,7 @@ function SetBusinessTime() {
               }}
             />
             <ListBtn
-              value="취소"
+              value="キャンセル"
               color="bg-red-400/90"
               onClick={() => {
                 setOnchange(false);

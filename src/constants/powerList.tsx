@@ -1,4 +1,3 @@
-import path from "path";
 import AdminIcon from "../icons/AdminIcon";
 import MasterIcon from "../icons/MasterIcon";
 import RestaurantIcon from "../icons/RestaurantIcon";
@@ -9,43 +8,43 @@ const basePath = (address: string): string => {
 };
 
 export const master = {
-  power: "총관리자",
+  power: "総管理者",
   icon: <MasterIcon />,
   list: [
     {
-      name: "전체 사용자 관리",
+      name: "全体のユーザー管理",
       path: basePath("master/management"),
     },
     {
-      name: "미승인 사용자 관리",
+      name: "未承認ユーザー管理",
       path: basePath("master/unapprovedUser"),
     },
   ],
 };
 
 export const salon = {
-  power: "미용실",
+  power: "美容室",
   icon: <SalonIcon />,
   list: [
-    { name: "승인 예약 목록", path: basePath("salon/reservation") },
+    { name: "承認予約リスト", path: basePath("salon/reservation") },
     {
-      name: "미승인 예약 목록",
+      name: "未承認の予約リスト",
       path: basePath("salon/pending"),
     },
     {
-      name: "영업 관리",
+      name: "営業管理",
       path: basePath("salon/priceCorrection"),
     },
   ],
 };
 
 export const admin = {
-  power: "행정",
+  power: "行政",
   icon: <AdminIcon />,
   list: [
-    { name: "공지사항", path: basePath("admin/notice") },
+    { name: "お知らせ", path: basePath("admin/notice") },
     {
-      name: "외박 / 외출",
+      name: "外泊 / お出かけ",
       path: basePath("admin/stayOut"),
     },
     {
@@ -53,38 +52,38 @@ export const admin = {
       path: basePath("admin/repair"),
     },
     {
-      name: "회의실",
+      name: "会議室",
       path: basePath("admin/meetingRoom"),
     },
     {
-      name: "버스 시간표",
+      name: "バスの時刻表",
       path: basePath("admin/busTimeTable"),
     },
   ],
 };
 
 export const restaurant = {
-  power: "식수",
+  power: "食堂",
   icon: <RestaurantIcon />,
   list: [
     {
-      name: "영업 관리",
+      name: "営業管理",
       path: basePath("restaurant/management"),
     },
     {
-      name: "식단표 추가",
+      name: "献立表の追加",
       path: basePath("restaurant/dietPlan"),
     },
     {
-      name: "주말 식수 현황",
+      name: "週末の食事状況",
       path: basePath("restaurant/weekendMeal"),
     },
     {
-      name: "학기 식수 현황",
+      name: "学期の食事の現況",
       path: basePath("restaurant/semesterMeal"),
     },
     {
-      name: "식수 신청자 QR체크",
+      name: "食事の申込者QRチェック",
       path: basePath("restaurant/qrCheck"),
     },
   ],

@@ -15,8 +15,8 @@ function SalonServiceList(props: SalonServiceListType) {
     getServiceFuc,
   } = props;
   const headList = [
-    { value: "시술명", col: "col-span-1" },
-    { value: "가격", col: "col-span-1" },
+    { value: "施術名", col: "col-span-1" },
+    { value: "値段", col: "col-span-1" },
     { value: "", col: "col-span-1" },
   ];
 
@@ -66,7 +66,7 @@ function SalonServiceList(props: SalonServiceListType) {
             />
             <div className="flex gap-3 items-center justify-center">
               <ListBtn
-                value="생성"
+                value="生成"
                 color="bg-blue-400/90"
                 onClick={() => {
                   createServiceFuc(id, newName, newValue).then(() => {
@@ -76,7 +76,7 @@ function SalonServiceList(props: SalonServiceListType) {
                 }}
               />
               <ListBtn
-                value="취소"
+                value="キャンセル"
                 color="bg-red-400/90"
                 onClick={() => {
                   setCreateService(false);
@@ -151,7 +151,7 @@ function ServiceList(props: ServiceListType) {
           </div>
           <div className="m-auto border-b py-4 w-full space-x-5 text-center">
             <ListBtn
-              value="수정완료"
+              value="修正完了"
               color="bg-sky-400/90"
               onClick={() => {
                 patchService(service.id).then(() => {
@@ -161,7 +161,7 @@ function ServiceList(props: ServiceListType) {
               }}
             />
             <ListBtn
-              value="취소"
+              value="キャンセル"
               color="bg-red-400/90"
               onClick={() => {
                 setOnModify(false);
@@ -179,7 +179,7 @@ function ServiceList(props: ServiceListType) {
           </div>
           <div className="m-auto border-b py-4 w-full space-x-5 text-center">
             <ListBtn
-              value="수정"
+              value="修正"
               color="bg-sky-400/90"
               onClick={() => {
                 setOnModify(true);
@@ -188,7 +188,7 @@ function ServiceList(props: ServiceListType) {
               }}
             />
             <ListBtn
-              value="삭제"
+              value="削除"
               color="bg-red-400/90"
               onClick={() => {
                 deleteServiceFuc(service.id).then(() => {

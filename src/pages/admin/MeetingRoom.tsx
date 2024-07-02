@@ -237,7 +237,7 @@ function MeetingRoom() {
         </S.CalendarBox>
         <div className="bg-white rounded-md relative h-[440px] p-2 py-4 border-2 border-sky-900/30 shadow-lg">
           <div className="absolute right-24 -translate-y-12 font-bold text-xl px-4">
-            회의실 이용상황
+            会議室の利用状況
           </div>
           <div className="grid grid-cols-2 gap-6 px-6 py-2 text-center overflow-auto max-h-full">
             {rooms.map((v) => {
@@ -250,7 +250,7 @@ function MeetingRoom() {
             <input
               type="text"
               className="p-2 w-32 text-center ring-2 rounded-2xl focus:outline-none focus:ring-2 focus:rounded-xl focus:ring-blue-500 shadow-md"
-              placeholder="회의실 호실"
+              placeholder="会議室の号室"
               onChange={(e) => {
                 setNewRoomName(e.target.value);
               }}
@@ -259,7 +259,7 @@ function MeetingRoom() {
           </div>
           <div>
             <ListBtn
-              value="생성"
+              value="生成"
               color="bg-blue-400/90"
               onClick={() => {
                 createRoomMutation();
@@ -273,14 +273,14 @@ function MeetingRoom() {
         <div className="flex border-b-4 border-blue-600/50 mb-10 p-2">
           <div className="flex-1 font-bold text-2xl">
             <span className="text-blue-700/70 text-3xl">
-              {room?.room_number}호
+              {room?.room_number}号
             </span>{" "}
-            예약자 리스트
+            予約者リスト
           </div>
           {room?.open ? (
             <div className="flex gap-3">
               <ListBtn
-                value="회의실 닫기"
+                value="close"
                 color="bg-orange-400/90"
                 onClick={() => {
                   patchRoomMutation(0);
@@ -288,7 +288,7 @@ function MeetingRoom() {
               />
 
               <ListBtn
-                value="회의실 삭제"
+                value="削除"
                 color="bg-red-400/90"
                 onClick={() => {
                   deleteRoomMutation();
@@ -302,7 +302,7 @@ function MeetingRoom() {
         ) : (
           <div className="flex gap-3 justify-center">
             <ListBtn
-              value="회의실 열기"
+              value="open"
               color="bg-orange-400/90"
               onClick={() => {
                 patchRoomMutation(1);
@@ -310,7 +310,7 @@ function MeetingRoom() {
             />
 
             <ListBtn
-              value="회의실 삭제"
+              value="削除"
               color="bg-red-400/90"
               onClick={() => {
                 deleteRoomMutation();
@@ -320,7 +320,7 @@ function MeetingRoom() {
         )}
         {reservationList.length > 0 ? (
           <div className="font-bold text-xl mt-4 text-blue-700">
-            예약자 명단
+            予約者リスト
           </div>
         ) : null}
         <div className="flex flex-wrap gap-2">
@@ -335,7 +335,7 @@ function MeetingRoom() {
                   )}59`}
                 </div>
                 <ListBtn
-                  value="예약거절"
+                  value="予約お断り"
                   color="bg-red-400"
                   onClick={() => {
                     patchReservaionListMutation(v.id);

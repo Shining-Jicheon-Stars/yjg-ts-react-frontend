@@ -43,26 +43,26 @@ function Sidebar() {
         </div>
         <div className="col-span-4 flex-col mt-4">
           <p className="text-center self-center text-white text-2xl font-bold underline underline-offset-8">
-            {userData.name} 님
+            {userData.name} 様
           </p>
           <div className="flex gap-2 mt-7 text-sm font-bold">
             <button
-              className="flex-1 py-3 rounded-3xl bg-cyan-400/70 uppercase text-white shadow-md shadow-inherit transition-all hover:shadow-sm hover:shadow-inherit  focus:opacity-[0.85] active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              className="flex-1 py-3 px-1 rounded-3xl bg-cyan-400/70 uppercase text-white shadow-md shadow-inherit transition-all hover:shadow-sm hover:shadow-inherit  focus:opacity-[0.85] active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               data-ripple-light="true"
               onClick={() => {
                 navigate("/main/mypage");
               }}
             >
-              내정보
+              My page
             </button>
             <button
               onClick={() => {
                 logoutMutation();
               }}
-              className="flex-1 py-3 rounded-3xl bg-cyan-600 uppercase text-white shadow-md shadow-inherit transition-all hover:shadow-sm hover:shadow-inherit focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+              className="flex-1 py-3 px-1 rounded-3xl bg-cyan-600 uppercase text-white shadow-md shadow-inherit transition-all hover:shadow-sm hover:shadow-inherit focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               data-ripple-light="true"
             >
-              로그아웃
+              log out
             </button>
           </div>
         </div>

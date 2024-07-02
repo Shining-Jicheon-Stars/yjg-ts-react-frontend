@@ -185,7 +185,7 @@ function FindMyAccountForm(): JSX.Element {
             setFindingAccount("findingId");
           }}
         >
-          아이디 찾기
+          ID探し
         </div>
         <div
           className={`${
@@ -197,7 +197,7 @@ function FindMyAccountForm(): JSX.Element {
             setFindingAccount("findingPassword");
           }}
         >
-          비밀번호 찾기
+          パスワード探し
         </div>
       </div>
       <form
@@ -297,7 +297,7 @@ function FindMyAccountForm(): JSX.Element {
           className="rounded-xl bg-cyan-600 py-3 mt-10 text-xl font-bold uppercase text-white shadow-md transition-all hover:shadow-lg hover:shadow-black/10 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
           data-ripple-light="true"
         >
-          {findingAccount === "findingId" ? "아이디 찾기" : "비밀번호 찾기"}
+          {findingAccount === "findingId" ? "ID探し" : "パスワード探し"}
         </button>
         <GoLogin />
       </form>

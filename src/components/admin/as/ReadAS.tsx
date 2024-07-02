@@ -55,19 +55,19 @@ function ReadAS() {
     <div className="flex flex-col gap-4">
       <div className="flex border-b-2 border-black items-end">
         <div className="flex-1 text-4xl font-bold tracking-tighter text-left p-4">
-          제목 : {afterService?.title}
+          タイトル : {afterService?.title}
         </div>
 
         <div className="flex flex-col p-2 font-bold text-right text-lg">
-          <div>작성자 : {afterService?.user.name}</div>
+          <div>作成者 : {afterService?.user.name}</div>
         </div>
       </div>
       <div className="flex gap-10 text-xl font-bold">
         <div>
-          장소: <span>{afterService?.visit_place}</span>
+          場所: <span>{afterService?.visit_place}</span>
         </div>
         <div>
-          희망처리일자: <span>{afterService?.visit_date}</span>
+          希望処理日: <span>{afterService?.visit_date}</span>
         </div>
       </div>
       <div className="bg-white relative rounded-lg border border-black/40 px-4 py-6 min-h-96">
@@ -107,12 +107,12 @@ function ReadAS() {
       {afterService?.status ? null : (
         <div className="flex justify-end gap-4">
           <ListBtn
-            value="A/S 완료"
+            value="A/S 完了"
             color="bg-sky-400/90"
             onClick={patchASMutation}
           />
           <ListBtn
-            value="닫기"
+            value="close"
             color="bg-red-400/90"
             onClick={() => {
               navigate("/main/admin/repair");

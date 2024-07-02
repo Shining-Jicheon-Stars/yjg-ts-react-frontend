@@ -6,7 +6,7 @@ function GoLogin() {
   return (
     <div className="flex justify-center gap-2 mt-3">
       <div className="text-xs text-right pt-1 font-bold">
-        이미 계정이 있나요?
+        アカウントはありますか
       </div>
       <div
         className="text-xs text-right pt-1 font-bold underline-offset-2  hover:underline cursor-pointer"
@@ -14,7 +14,7 @@ function GoLogin() {
           navigate("/");
         }}
       >
-        로그인
+        ログイン
       </div>
     </div>
   );

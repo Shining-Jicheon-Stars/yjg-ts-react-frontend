@@ -15,17 +15,17 @@ function Repair() {
   const kind = [
     {
       state: 1,
-      head: "처리완료",
+      head: "処理完了",
     },
     {
       state: 0,
-      head: "미처리",
+      head: "未処理",
     },
   ];
   const headList = [
-    { value: "제목", col: "col-span-2" },
-    { value: "작성자", col: "col-span-1" },
-    { value: "호수", col: "col-span-1" },
+    { value: "タイトル", col: "col-span-2" },
+    { value: "作成者", col: "col-span-1" },
+    { value: "号数", col: "col-span-1" },
     { value: "", col: "col-span-1" },
   ];
   const dataList = [
@@ -34,7 +34,7 @@ function Repair() {
     { value: "visit_place", col: "col-span-1" },
     [
       {
-        value: "조회",
+        value: "照会",
         color: "bg-cyan-500",
         onClick: (user: AfterServiceListType) => {
           navigate(`/main/admin/reading/${user.id}`, {
@@ -53,7 +53,7 @@ function Repair() {
   // A/S 데이터 값
   const [ASList, setASList] = useState<AfterServiceListType[]>([]);
   // 태그 리스트
-  const tagList = [{ value: "name", name: "이름" }];
+  const tagList = [{ value: "name", name: "名前" }];
   // 검색 바 태그 값
   const [tag, setTag] = useState("");
   // 검색 바 제목 값
@@ -138,7 +138,7 @@ function Repair() {
   return (
     <div className="flex flex-col gap-4 mx-10">
       <div className="flex gap-4">
-        <div className="text-4xl font-bold">A/S 리스트</div>
+        <div className="text-4xl font-bold">A/Sリスト</div>
         <div className="flex gap-3 pl-2 items-end tracking-tighter">
           {kind.map((v) => {
             return (

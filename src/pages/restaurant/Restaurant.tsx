@@ -37,7 +37,7 @@ function Restaurant() {
     <div className="flex flex-col gap-5">
       <div className="flex gap-10">
         <div>
-          <div className="font-bold text-lg pl-4 pb-2">• 금일 식단표</div>
+          <div className="font-bold text-lg pl-4 pb-2">• 本日の献立表</div>
           <div className="bg-white min-w-[34rem] flex gap-2 shadow-lg px-5 py-4 border border-black/10 rounded-xl min-h-72">
             {todayMenu.length > 0 ? (
               todayMenu.map((v) => {
@@ -45,7 +45,7 @@ function Restaurant() {
               })
             ) : (
               <div className="m-auto px-10 font-bold text-gray-400 text-xl text-center">
-                금일 식단표가 없습니다.
+                本日の献立表はありません。
               </div>
             )}
           </div>
